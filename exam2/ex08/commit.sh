@@ -1,7 +1,7 @@
 #!/bin/bash
 
 git status
-git add exam2/
-git commit -m "$1" 
-git push
+git add .
+git commit -m $1
+git push 
 
