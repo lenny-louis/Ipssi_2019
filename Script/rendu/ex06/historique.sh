@@ -1,0 +1,2 @@
+history | tail -15
+
