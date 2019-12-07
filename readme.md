@@ -4,7 +4,7 @@ Devops,IPSSI SCHOOL.
 Here, you can find all updates and versions of my scripts.
 
 
-[![forthebadge](https://forthebadge.com/images/badges/made-with-crayons.svg)](https://forthebadge.com)
+[![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
 
 
 # Languages
