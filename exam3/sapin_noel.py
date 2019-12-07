@@ -17,4 +17,13 @@ for i in range(1,n):
  print((n-i)*' '+sl+s+sr)
 #print the trunk
 
-print((n-1)*' ' + "xx")
+if (n%2 == 0):
+        n=n+1
+        if (n <= 3):
+            print((n-1)*' ' + "x")
+            print((n-1)*' ' + "x")
+        else:
+            print((n-1)*' ' + "xx")
+            print((n-1)*' ' + "xx")
+    
+#print((n-1)*' ' + "xx")
