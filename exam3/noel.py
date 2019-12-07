@@ -4,18 +4,9 @@ import calendar
 from datetime import datetime, timedelta
 from tree import show_tree
 from datetime import date
-"""
-s = '2019/12/25'
-date = datetime.strptime(s, "%Y/%m/%d")
-modified_date = date 
-
-today = date.today()
-d1 = today.strftime("%d")
-
-print (int(datetime.strftime(modified_date, "%d")) - int(today.strftime("%d")), "days before christmas","\n","\n") """
 
 def show_noel(n):
-    #
+    
     s = '2019/12/25'
     date = datetime.strptime(s, "%Y/%m/%d")
     modified_date = date 
@@ -24,7 +15,7 @@ def show_noel(n):
     d1 = today.strftime("%d")
 
     print (int(datetime.strftime(modified_date, "%d")) - int(today.strftime("%d")), "days before christmas","\n","\n") 
-#
+
     if len(n) > 1:
         date_time_str = n[1]
         datedata = datetime.strptime(date_time_str, '%Y-%m-%d')
