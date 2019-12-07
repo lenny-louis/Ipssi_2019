@@ -14,7 +14,6 @@ d1 = today.strftime("%d")
 
 print (int(datetime.strftime(modified_date, "%d")) - int(today.strftime("%d")), "days before christmas","\n","\n") 
 
-
 def show_noel(n):
     if len(n) > 1:
         date_time_str = n[1]
@@ -22,9 +21,7 @@ def show_noel(n):
         
     else:
         datedata = datetime.now()
-        
-        
-       
+          
 
     var = calendar.TextCalendar(calendar.MONDAY)
     firstCalendar = var.formatmonth(datedata.year, datedata.month, 5, 1)
