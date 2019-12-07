@@ -1,7 +1,7 @@
 # REPOSITORY OF LENNY'S SCRIPT
 
-Devops,IPSSI SCHOOL.
-Here, you can find all updates and versions of my scripts.
+Dans le cadre d'une formation DEVOPS à l'IPSSI.
+Vous pourrez voir les nombreux versionnement de mes scripts suite à des exercices donnés en classe.
 
 
 [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
@@ -9,7 +9,7 @@ Here, you can find all updates and versions of my scripts.
 
 # Languages
 
-You will be able to see somes script on Python, Shell, ansible...
+Vous verrez du codage en plusieurs languages tel que du shell,python,ansible,java...
 
 
 
