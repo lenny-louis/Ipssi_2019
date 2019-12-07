@@ -1,16 +1,28 @@
+#!/usr/bin/python3
 
 import sys
 
-N = int(sys.argv[1])
-Y = int(3)
-
-def fn(n):
-    if n != 0:
-        print(n*' '+((N-n)*2+1)*'x')
-        fn(n-1)
+def show_tree(x):
+    y=int(x/5)+1
+    if (x%2 == 0):
+        x=x+1
+    if (x <= 3):
+        tronc="x"
     else:
-        if ( Y <= N ):
-            print(N*' '+'xx')
+        tronc="xx"
+    arbre=""
+    for n in range(1,x+1,2):
+        arbre=arbre +(n*"x").center(x)
+        jumpline="\n"
+        arbre=arbre+jumpline
+        
+    for n in range(y):
+        if (n<y-1):
+            arbre=arbre+(tronc).center(x)
+            arbre=arbre+jumpline
         else:
-            print(N*' '+'x')
-fn(int(sys.argv[1]))
+            arbre=arbre+(tronc).center(x)
+    return arbre
+
+if __name__ == "__main__":
+    print(show_tree(int(sys.argv[1])))
