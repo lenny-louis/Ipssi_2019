@@ -1,4 +1,4 @@
-# REPOSITORY OF LENNY'S SCRIPT
+# REPERTOIRE DE LENNY
 
 Dans le cadre d'une formation DEVOPS à l'IPSSI.
 Vous pourrez voir les nombreux versionnement de mes scripts suite à des exercices donnés en classe.
