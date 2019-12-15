@@ -2,35 +2,35 @@ import sys
 from math import floor
 import random  
 
-def show_tree(largeur):
-    hauteur_tronc=floor((largeur/5))+1
-    if (largeur%2 == 0):
-        largeur=largeur+1
-    if largeur <= 3:
+def show_tree(lar):
+    hauteur=floor((lar/5))+1
+    if (lar%2 == 0):
+        lar=lar+1
+    if lar <= 3:
         tronc=1
     else:
         tronc=3
     tree=""
-    nb_boule=floor(random.random()*largeur)
+    nombre_boule=floor(random.random()*lar)
 
-    for i in range(1,largeur+1,2):
+    for i in range(1,lar+1,2):
 
-        tree=tree +(i*"x").center(largeur)
+        tree=tree +(i*"x").center(lar)
         tree=tree+"\n"
     chaine= list(tree)
 
     for i in range(len(chaine)):
-        if (random.random() < largeur/100):
+        if (random.random() < lar/100):
             if (chaine[i] == 'x'):
                 chaine[i] = 'O'
     tree= "".join(chaine)
     
-    for i in range(hauteur_tronc):
-        if (i<hauteur_tronc-1):
-            tree=tree+(tronc*"x").center(largeur)
+    for i in range(hauteur):
+        if (i<hauteur-1):
+            tree=tree+(tronc*"x").center(lar)
             tree=tree+"\n"
         else:
-            tree=tree+(tronc*"x").center(largeur)
+            tree=tree+(tronc*"x").center(lar)
     
     
     return tree
