@@ -2,6 +2,8 @@ import sys
 from math import floor
 import random  
 
+jumpline="\n"
+
 def show_tree(lar):
     hauteur=floor((lar/5))+1
     if (lar%2 == 0):
@@ -16,7 +18,7 @@ def show_tree(lar):
     for i in range(1,lar+1,2):
 
         tree=tree +(i*"x").center(lar)
-        tree=tree+"\n"
+        tree=tree+jumpline
     chaine= list(tree)
 
     for i in range(len(chaine)):
@@ -28,7 +30,7 @@ def show_tree(lar):
     for i in range(hauteur):
         if (i<hauteur-1):
             tree=tree+(tronc*"x").center(lar)
-            tree=tree+"\n"
+            tree=tree+jumpline
         else:
             tree=tree+(tronc*"x").center(lar)
     
