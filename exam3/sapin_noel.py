@@ -1,29 +1,40 @@
-import random as r
 import sys
-#get input
-#n = int(input())
-n = int(sys.argv[1])
-#make the top of the tree
-print(n*' '+'x')
-#this loop draws the entire tree's body--
-#--------------------------------
-for i in range(1,n):
- #s is stored as a string of length i*2 with * and ~ in random positions, this is used for the body of the tree
- s = ''.join(r.choice(['x','o',r.choice(['x','o'])]) for i in range(i*2))
- #string sl and sr holds the random string for the left and right side boundary of the tree's body
- sl = r.choice(['x'])
- sr = r.choice(['o'])
- #print all of 'em at last
- print((n-i)*' '+sl+s+sr)
-#print the trunk
+from math import floor
+import random  
 
-if (n%2 == 0):
-        n=n+1
-        if (n <= 3):
-            print((n-1)*' ' + "x")
-            print((n-1)*' ' + "x")
-        else:
-            print((n-1)*' ' + "xx")
-            print((n-1)*' ' + "xx")
+jumpline="\n"
+
+def show_tree(lar):
+    hauteur=floor((lar/5))+1
+    if (lar%2 == 0):
+        lar=lar+1
+    if lar <= 3:
+        tronc=1
+    else:
+        tronc=3
+    tree=""
+    nombre_boule=floor(random.random()*lar)
+
+    for i in range(1,lar+1,2):
+
+        tree=tree +(i*"x").center(lar)
+        tree=tree+jumpline
+    chaine= list(tree)
+
+    for i in range(len(chaine)):
+        if (random.random() < lar/100):
+            if (chaine[i] == 'x'):
+                chaine[i] = 'O'
+    tree= "".join(chaine)
     
-#print((n-1)*' ' + "xx")
+    for i in range(hauteur):
+        if (i<hauteur-1):
+            tree=tree+(tronc*"x").center(lar)
+            tree=tree+jumpline
+        else:
+            tree=tree+(tronc*"x").center(lar)
+    
+    
+    return tree
+if __name__ == "__main__":
+    print(show_tree(int(sys.argv[1])))
